@@ -9,7 +9,7 @@
     android:orientation="vertical">
 
 
-
+    <!-- Text Field -->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardView"
         style="?attr/materialCardViewFilledStyle"
@@ -25,6 +25,7 @@
 
     </com.google.android.material.card.MaterialCardView>
 
+    <!-- mini buttons row -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -88,76 +89,9 @@
         </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
 
+        <!-- First Row -->
 
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        android:layout_weight=".5">
-
-        <Button
-            android:id="@+id/ac_Button"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight=".5"
-            android:layout_marginEnd="4dp"
-            android:layout_marginBottom="4dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginStart="16dp"
-            app:backgroundTint="@color/gray_purple"
-            android:background="@drawable/round_buttons"
-            app:elevation="0dp"
-            android:text="AC"
-            android:textAppearance="?attr/textAppearanceDisplayMedium"
-            android:textSize="20dp"
-            android:textColor="@color/light_pink"
-            style="@style/Widget.Material3.Button.TonalButton">
-        </Button>
-
-        <Button
-            android:id="@+id/ac_Button1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight=".5"
-            android:layout_margin="4dp"
-            app:backgroundTint="@color/dark_pink"
-            android:background="@drawable/round_buttons"
-            app:elevation="0dp"
-            android:text="%"
-            android:textColor="@color/gray_purple"
-            android:textSize="36dp"
-            style="@style/Widget.Material3.Button.TonalButton">
-        </Button>
-
-        <Button
-            android:id="@+id/ac_Button3"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight=".5"
-            android:background="@drawable/round_buttons"
-            android:layout_margin="4dp"
-            app:backgroundTint="@color/dark_pink"
-            app:elevation="0dp">
-        </Button>
-
-        <Button
-            android:id="@+id/ac_Button4"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight=".5"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="4dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginStart="4dp"
-            app:backgroundTint="@color/dark_pink"
-            app:elevation="0dp"
-            android:background="@drawable/round_buttons">
-        </Button>
-
-    </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -166,7 +100,7 @@
         android:backgroundTint="@color/dark_pink">
 
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-            android:id="@+id/key1"
+            android:id="@+id/ac"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".5"
@@ -174,36 +108,37 @@
             android:layout_marginBottom="4dp"
             android:layout_marginTop="4dp"
             android:layout_marginStart="16dp"
-            app:backgroundTint="@color/light_pink"
-            app:elevation="0dp"
-            android:text="1"
-            android:textAlignment="center"
-            android:textSize="36dp">
+            app:backgroundTint="@color/gray_purple"
+            style="@style/number_keys"
+            android:textColor="@color/white"
+            android:textSize="32dp"
+            android:text=" AC">
+
         </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
 
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/key2"
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/percent"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".5"
             android:layout_margin="4dp"
-            app:backgroundTint="@color/light_pink"
-            app:elevation="0dp">
-        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+            style="@style/symbols_keys"
+            android:text=" %">
+        </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/key3"
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/divide"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".5"
             android:layout_margin="4dp"
-            app:backgroundTint="@color/light_pink"
-            app:elevation="0dp">
-        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+            style="@style/symbols_keys"
+            android:text=" ÷">
+        </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/multiply"
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/backspace"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".5"
@@ -211,13 +146,74 @@
             android:layout_marginBottom="4dp"
             android:layout_marginTop="4dp"
             android:layout_marginStart="4dp"
-            app:backgroundTint="@color/dark_pink"
-            app:elevation="0dp">
-        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+            style="@style/symbols_keys"
+            android:text="⌫">
+        </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
 
     </LinearLayout>
 
+    <!-- Second Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight=".5"
+            android:backgroundTint="@color/dark_pink">
 
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/key1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".5"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="16dp"
+                app:backgroundTint="@color/light_pink"
+                app:elevation="0dp"
+                android:text="@string/_1"
+                android:letterSpacing="0.25"
+                android:textSize="36sp"
+                android:fontFamily="sans-serif-condensed-light">
+            </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
+
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/key2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".5"
+                android:layout_margin="4dp"
+                style="@style/number_keys"
+                android:text="@string/_2">
+            </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/key3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".5"
+                android:layout_margin="4dp"
+                style="@style/number_keys"
+                android:text="@string/_3">
+            </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/multiply"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".5"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="4dp"
+                app:backgroundTint="@color/dark_pink"
+                app:elevation="0dp">
+            </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
+
+        </LinearLayout>
+
+    <!-- Third Row -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -225,7 +221,7 @@
         android:layout_weight=".5"
         android:backgroundTint="@color/dark_pink">
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
             android:id="@+id/key4"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -234,31 +230,31 @@
             android:layout_marginBottom="4dp"
             android:layout_marginTop="4dp"
             android:layout_marginStart="16dp"
-            app:backgroundTint="@color/light_pink"
-            app:elevation="0dp">
-        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+            style="@style/number_keys"
+            android:text="@string/_4">
+        </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
             android:id="@+id/key5"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".5"
             android:layout_margin="4dp"
-            app:backgroundTint="@color/light_pink"
-            app:elevation="0dp">
-        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+            style="@style/number_keys"
+            android:text="@string/_5">
+        </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
             android:id="@+id/key6"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".5"
             android:layout_margin="4dp"
-            app:backgroundTint="@color/light_pink"
-            app:elevation="0dp">
-        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+            style="@style/number_keys"
+            android:text="@string/_6">
+        </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
             android:id="@+id/minus"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -269,10 +265,11 @@
             android:layout_marginStart="4dp"
             app:backgroundTint="@color/dark_pink"
             app:elevation="0dp">
-        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+        </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
 
     </LinearLayout>
 
+    <!-- Fourth Row -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -280,7 +277,7 @@
         android:layout_weight=".5"
         android:backgroundTint="@color/dark_pink">
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
             android:id="@+id/key7"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -289,31 +286,31 @@
             android:layout_marginBottom="4dp"
             android:layout_marginTop="4dp"
             android:layout_marginStart="16dp"
-            app:backgroundTint="@color/light_pink"
-            app:elevation="0dp">
-        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+            style="@style/number_keys"
+            android:text="@string/_7">
+        </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
             android:id="@+id/key8"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".5"
             android:layout_margin="4dp"
-            app:backgroundTint="@color/light_pink"
-            app:elevation="0dp">
-        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+            style="@style/number_keys"
+            android:text="@string/_8">
+        </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
             android:id="@+id/key9"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".5"
             android:layout_margin="4dp"
-            app:backgroundTint="@color/light_pink"
-            app:elevation="0dp">
-        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+            style="@style/number_keys"
+            android:text="9">
+        </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
             android:id="@+id/plus"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -324,12 +321,12 @@
             android:layout_marginStart="4dp"
             app:backgroundTint="@color/dark_pink"
             app:elevation="0dp">
-        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+        </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
 
     </LinearLayout>
 
 
-
+    <!-- Last Row -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -337,7 +334,7 @@
         android:layout_weight=".5"
         android:backgroundTint="@color/dark_pink">
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
             android:id="@+id/key0"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -346,19 +343,20 @@
             android:layout_marginBottom="4dp"
             android:layout_marginTop="4dp"
             android:layout_marginStart="16dp"
-            app:backgroundTint="@color/light_pink"
-            app:elevation="0dp">
-        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+            style="@style/number_keys"
+            android:text="@string/_0">
+        </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
             android:id="@+id/key_decimal"
+            style="@style/number_keys"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight=".5"
             android:layout_margin="4dp"
-            app:backgroundTint="@color/light_pink"
-            app:elevation="0dp">
-        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+            android:layout_weight=".5"
+            android:text="."
+            android:textColor="#FF1744"
+            tools:ignore="TextContrastCheck"></com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
 
 
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
@@ -372,7 +370,11 @@
             android:layout_weight="1"
             app:backgroundTint="@color/equal_button"
             app:elevation="0dp"
-            android:shadowColor="@color/light_red">
+            android:shadowColor="@color/light_red"
+            android:text="="
+            android:gravity="center"
+            android:textSize="42dp"
+            android:fontFamily="sans-serif-condensed-light">
 
 
         </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>

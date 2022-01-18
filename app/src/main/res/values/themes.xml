@@ -15,6 +15,29 @@
         <item name="android:navigationBarColor">@color/light_red</item>
         <!-- Customize your theme here. -->
 
+
+    </style>
+
+    <style name="number_keys">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAlignment">center</item>
+        <item name="backgroundTint">@color/light_pink</item>
+        <item name="android:textSize">@dimen/key</item>
+        <item name="android:textColor">@color/pie_color</item>
+        <item name="android:elevation">0dp</item>
+    </style>
+
+    <style name="symbols_keys">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAlignment">center</item>
+        <item name="backgroundTint">@color/dark_pink</item>
+        <item name="android:textSize">@dimen/symbols</item>
+        <item name="android:textColor">@color/pie_color</item>
+        <item name="android:elevation">0dp</item>
     </style>
 
 </resources>
