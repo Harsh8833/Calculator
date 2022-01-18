@@ -24,73 +24,63 @@
 
     </com.google.android.material.card.MaterialCardView>
 
-    <TableLayout
+
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:stretchColumns="0,1,2,3"
-        android:layout_marginTop="25dp">
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight=".5"
+        android:backgroundTint="@color/dark_pink">
 
-        <TableRow
-            android:layout_width="fill_parent"
-            android:layout_weight="100"
-            android:layout_gravity="fill_horizontal">
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/ac_Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="16dp"
+            app:backgroundTint="@color/gray_purple"
+            app:elevation="0dp">
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/ac_Button"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginEnd="4dp"
-                android:layout_marginBottom="4dp"
-                android:layout_marginStart="16dp"
-                app:backgroundTint="@color/gray_purple"
-                app:elevation="0dp"
-                app:fabCustomSize="88dp"
-                android:layout_weight="25">
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/ac_Button1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:layout_margin="4dp"
+            app:backgroundTint="@color/dark_pink"
+            app:elevation="0dp">
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
-            </com.google.android.material.floatingactionbutton.FloatingActionButton>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/ac_Button3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:layout_margin="4dp"
+            app:backgroundTint="@color/dark_pink"
+            app:elevation="0dp">
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/percent"
-                android:layout_width="88dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="4dp"
-                android:layout_marginEnd="4dp"
-                android:layout_marginBottom="4dp"
-                android:layout_weight="25"
-                app:backgroundTint="@color/dark_pink"
-                app:elevation="0dp">
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/ac_Button4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="4dp"
+            app:backgroundTint="@color/dark_pink"
+            app:elevation="0dp">
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
-            </com.google.android.material.floatingactionbutton.FloatingActionButton>
+    </LinearLayout>
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/divide"
-                android:layout_width="94dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="4dp"
-                android:layout_marginEnd="4dp"
-                android:layout_marginBottom="4dp"
-                android:layout_weight="25"
-                app:backgroundTint="@color/dark_pink"
-                app:elevation="0dp">
-
-            </com.google.android.material.floatingactionbutton.FloatingActionButton>
-
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/backspace"
-                android:layout_width="95dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="4dp"
-                android:layout_marginEnd="4dp"
-                android:layout_marginBottom="4dp"
-                android:layout_weight="25"
-                app:backgroundTint="@color/dark_pink"
-                app:elevation="0dp">
-
-            </com.google.android.material.floatingactionbutton.FloatingActionButton>
-        </TableRow>
-
-
-    </TableLayout>
 
 
 
