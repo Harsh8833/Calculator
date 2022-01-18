@@ -13,6 +13,8 @@
     <color name="dark_pink">#F4B6B0</color>
     <color name="light_pink">#F5DFD9</color>
     <color name="equal_button">#DA7E70</color>
+    <color name="pie_color">#413D4B</color>
+    <color name="up_down">#F6D8D8</color>
 
 
 </resources>

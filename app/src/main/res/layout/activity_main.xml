@@ -29,17 +29,62 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        android:layout_weight=".3">
+        android:layout_weight=".25"
+        android:layout_marginTop="10dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight=".2"
-            android:gravity="center_vertical"
-            android:text="()"
-            android:textSize="10dp"
-            android:textAppearance="?attr/textAppearanceBodyLarge"
+            android:gravity="center"
+            android:text="( )"
+            android:textSize="30dp"
+            android:textColor="@color/pie_color"
+            android:textAppearance="?attr/textAppearanceDisplayMedium"
             />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:gravity="center"
+
+            android:text="π"
+            android:textSize="30dp"
+            android:textColor="@color/pie_color"
+            android:textAppearance="?attr/textAppearanceDisplayMedium"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:gravity="center"
+            android:text="e"
+            android:textSize="30dp"
+            android:textColor="@color/pie_color"
+            android:textAppearance="?attr/textAppearanceDisplayMedium"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:gravity="center"
+            android:text="!"
+            android:textSize="30dp"
+            android:textColor="@color/pie_color"
+            android:textAppearance="?attr/textAppearanceDisplayMedium"
+            />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/log_key"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".1"
+            android:layout_margin="4dp"
+            app:backgroundTint="@color/dark_pink"
+            app:elevation="0dp">
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
 
 
