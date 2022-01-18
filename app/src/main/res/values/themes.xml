@@ -12,6 +12,12 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorOnPrimary</item>
         <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@color/light_red</item>
         <!-- Customize your theme here. -->
+
+    </style>
+
+    <style name="Buttons" parent="ThemeOverlay.Material3.Button.TonalButton">
+
     </style>
 </resources>
