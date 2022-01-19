@@ -1,16 +1,12 @@
 package com.example.calculator
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.InputType
 import android.util.Log
 import android.util.TypedValue
 import android.view.View
-import android.widget.Button
 import android.widget.EditText
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.textfield.TextInputEditText
-import kotlin.math.exp
 
 
 var newState = true
@@ -27,7 +23,9 @@ class MainActivity : AppCompatActivity() {
         val acButton: FloatingActionButton = findViewById(R.id.ac)
         acButton.setOnClickListener {
             expression = ""
+            display.setTextSize(TypedValue.COMPLEX_UNIT_SP, 90F)
             display.setText("0").toString()
+
         }
     }
 
@@ -50,23 +48,25 @@ class MainActivity : AppCompatActivity() {
         val divideButton: FloatingActionButton = findViewById(R.id.divide)
         val multiplyButton: FloatingActionButton = findViewById(R.id.multiply)
         val minusButton: FloatingActionButton = findViewById(R.id.minus)
-        val plusButton: FloatingActionButton =findViewById(R.id.plus)
+        val plusButton: FloatingActionButton = findViewById(R.id.plus)
 
 
 
 
-        if(expression.length > 12)
-        {
-            display.setTextSize(TypedValue.COMPLEX_UNIT_SP, 60F)
+        when (expression.length) {
+            in 0..13 -> display.setTextSize(TypedValue.COMPLEX_UNIT_SP, 90F)
+            in 13..32 -> display.setTextSize(TypedValue.COMPLEX_UNIT_SP, 60F)
+            else -> display.setTextSize(TypedValue.COMPLEX_UNIT_SP, 40F)
+
         }
 
 
-        when(clickedButton.id){
+        when (clickedButton.id) {
 
             zeroButton.id -> {
                 expression += "0"
             }
-            oneButton.id ->{
+            oneButton.id -> {
                 expression += "1"
             }
             twoButton.id -> {
@@ -99,7 +99,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             dotButton.id -> {
-                if(!expression.endsWith('.')){
+                if (!expression.endsWith('.')) {
                     expression += "."
                 }
             }
@@ -107,33 +107,69 @@ class MainActivity : AppCompatActivity() {
                 expression += "%"
             }
             divideButton.id -> {
-                if(!expression.endsWith('÷')){
+                if (!expression.endsWith('÷')) {
                     expression += "÷"
                 }
 
             }
             multiplyButton.id -> {
-                if(!expression.endsWith('×')){
+                if (!expression.endsWith('×')) {
                     expression += "×"
                 }
             }
             minusButton.id -> {
-                if(!expression.endsWith('-')){
+                if (!expression.endsWith('-')) {
                     expression += "−"
                 }
             }
 
             plusButton.id -> {
-                if(!expression.endsWith('+')){
+                if (!expression.endsWith('+')) {
                     expression += "+"
                 }
             }
-
-
 
 
         }
         display.setText(expression).toString()
     }
 
+    fun calculate(view: View) {
+
+
+        val display: EditText = findViewById(R.id.display)
+        var num: String = ""
+        var symbol: Char = '+'
+        var result: Int = 0
+
+        for (each in expression) {
+            if (each in '0'..'9')
+                num += each
+            else {
+                when (symbol) {
+                    '+' -> result += Integer.parseInt(num)
+                    '-' -> result -= Integer.parseInt(num)
+                    '×' -> result *= Integer.parseInt(num)
+                    '÷' -> result /= Integer.parseInt(num)
+                }
+                num = ""
+                symbol = each
+            }
+        }
+        when (symbol) {
+            '+' -> result += Integer.parseInt(num)
+            '-' -> result -= Integer.parseInt(num)
+            '×' -> result *= Integer.parseInt(num)
+            '÷' -> result /= Integer.parseInt(num)
+        }
+        var output = result.toString()
+
+        //display.setText("56").toString()
+        Log.e(Tag, "$output")
+        display.setText(output).toString()
+
+    }
 }
+
+
+

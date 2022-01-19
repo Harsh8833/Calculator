@@ -372,7 +372,8 @@
             android:textSize="42dp"
             app:backgroundTint="@color/equal_button"
             android:elevation="0dp"
-            app:elevation="0dp">
+            app:elevation="0dp"
+            android:onClick="calculate">
 
 
         </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
