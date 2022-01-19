@@ -79,13 +79,18 @@
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/log_key"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_weight=".1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_margin="4dp"
+            android:layout_weight=".1"
+            android:scaleType="center"
+            app:fabCustomSize="40dp"
+
+            android:src="@drawable/ic_up_down_icon"
             app:backgroundTint="@color/up_down"
-            android:layout_gravity="center|top"
             app:elevation="0dp">
+
         </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
 
@@ -99,7 +104,7 @@
         android:layout_weight=".5"
         android:backgroundTint="@color/dark_pink">
 
-        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/ac"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -108,36 +113,34 @@
             android:layout_marginBottom="4dp"
             android:layout_marginTop="4dp"
             android:layout_marginStart="16dp"
-            app:backgroundTint="@color/gray_purple"
-            style="@style/number_keys"
-            android:textColor="@color/white"
-            android:textSize="32dp"
-            android:text=" AC">
+            style="@style/ac_keys"
+            android:src="@drawable/acac_icon">
 
-        </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
 
-        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/percent"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".5"
             android:layout_margin="4dp"
             style="@style/symbols_keys"
-            android:text=" %">
-        </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
+            android:src="@drawable/_percent">
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
-        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/divide"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".5"
             android:layout_margin="4dp"
             style="@style/symbols_keys"
-            android:text=" ÷">
-        </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
+            android:src="@drawable/_divide_icon"
+            >
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
-        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/backspace"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -147,9 +150,8 @@
             android:layout_marginTop="4dp"
             android:layout_marginStart="4dp"
             style="@style/symbols_keys"
-            android:text="⌫"
-            android:textSize="40dp">
-        </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
+            android:src="@drawable/vectorbackspace_icon">
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
     </LinearLayout>
 
@@ -161,7 +163,7 @@
             android:layout_weight=".5"
             android:backgroundTint="@color/dark_pink">
 
-            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/key1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -170,36 +172,32 @@
                 android:layout_marginBottom="4dp"
                 android:layout_marginTop="4dp"
                 android:layout_marginStart="16dp"
-                app:backgroundTint="@color/light_pink"
-                app:elevation="0dp"
-                android:text="@string/_1"
-                android:letterSpacing="0.25"
-                android:textSize="36sp"
-                android:fontFamily="sans-serif-condensed-light">
-            </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
+                style="@style/number_keys"
+                android:src="@drawable/_one">
+            </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
 
-            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/key2"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight=".5"
                 android:layout_margin="4dp"
                 style="@style/number_keys"
-                android:text="@string/_2">
-            </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
+                android:src="@drawable/_two">
+            </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
-            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/key3"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight=".5"
                 android:layout_margin="4dp"
                 style="@style/number_keys"
-                android:text="@string/_3">
-            </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
+                android:src="@drawable/_three">
+            </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
-            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/multiply"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -209,9 +207,9 @@
                 android:layout_marginTop="4dp"
                 android:layout_marginStart="4dp"
                 style="@style/symbols_keys"
-                android:text=" X"
+                android:src="@drawable/_multiply_icon"
                 >
-            </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
+            </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
         </LinearLayout>
 
@@ -223,7 +221,7 @@
         android:layout_weight=".5"
         android:backgroundTint="@color/dark_pink">
 
-        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/key4"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -233,30 +231,30 @@
             android:layout_marginTop="4dp"
             android:layout_marginStart="16dp"
             style="@style/number_keys"
-            android:text="@string/_4">
-        </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
+            android:src="@drawable/_four">
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
-        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/key5"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".5"
             android:layout_margin="4dp"
             style="@style/number_keys"
-            android:text="@string/_5">
-        </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
+            android:src="@drawable/_five">
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
-        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/key6"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".5"
             android:layout_margin="4dp"
             style="@style/number_keys"
-            android:text="@string/_6">
-        </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
+            android:src="@drawable/_six">
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
-        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/minus"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -265,9 +263,9 @@
             android:layout_marginBottom="4dp"
             android:layout_marginTop="4dp"
             android:layout_marginStart="4dp"
-            android:text=" -"
-            style="@style/symbols_keys">
-        </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
+            style="@style/symbols_keys"
+            android:src="@drawable/_minus_icon">
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
     </LinearLayout>
 
@@ -279,7 +277,7 @@
         android:layout_weight=".5"
         android:backgroundTint="@color/dark_pink">
 
-        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/key7"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -289,30 +287,30 @@
             android:layout_marginTop="4dp"
             android:layout_marginStart="16dp"
             style="@style/number_keys"
-            android:text="@string/_7">
-        </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
+            android:src="@drawable/_seven">
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
-        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/key8"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".5"
             android:layout_margin="4dp"
             style="@style/number_keys"
-            android:text="@string/_8">
-        </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
+            android:src="@drawable/_eight">
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
-        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/key9"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".5"
             android:layout_margin="4dp"
             style="@style/number_keys"
-            android:text="9">
-        </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
+            android:src="@drawable/_nine">
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
-        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/plus"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -322,8 +320,9 @@
             android:layout_marginTop="4dp"
             android:layout_marginStart="4dp"
             style="@style/symbols_keys"
-            android:text=" +">
-        </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
+            android:src="@drawable/_addition_icon"
+            >
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
     </LinearLayout>
 
@@ -336,7 +335,7 @@
         android:layout_weight=".5"
         android:backgroundTint="@color/dark_pink">
 
-        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/key0"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -346,19 +345,18 @@
             android:layout_marginTop="4dp"
             android:layout_marginStart="16dp"
             style="@style/number_keys"
-            android:text="@string/_0">
-        </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
+            android:src="@drawable/_zero">
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
-        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/key_decimal"
             style="@style/number_keys"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="4dp"
             android:layout_weight=".5"
-            android:text="."
-            android:textColor="#FF1744"
-            tools:ignore="TextContrastCheck"></com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
+            android:src="@drawable/_dot">
+            </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
 
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
@@ -375,6 +373,7 @@
             android:shadowColor="@color/light_red"
             android:text="="
             android:gravity="center"
+            android:layout_gravity="center"
             android:textSize="42dp"
             android:fontFamily="sans-serif-condensed-light">
 
