@@ -130,7 +130,7 @@
             android:layout_marginEnd="4dp"
             android:layout_marginBottom="4dp"
             android:layout_weight=".5"
-            android:src="@drawable/acac_icon" />
+            android:src="@drawable/acac_icon"/>
 
 
 
@@ -184,8 +184,7 @@
             android:layout_marginEnd="4dp"
             android:layout_marginBottom="4dp"
             android:layout_weight=".5"
-            android:src="@drawable/_one"
-            android:onClick="digitClicked"/>
+            android:src="@drawable/_one"/>
 
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -195,8 +194,7 @@
             android:layout_height="match_parent"
             android:layout_margin="4dp"
             android:layout_weight=".5"
-            android:src="@drawable/_two"
-            android:onClick="digitClicked"/>
+            android:src="@drawable/_two"/>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/key3"
@@ -205,8 +203,7 @@
             android:layout_height="match_parent"
             android:layout_margin="4dp"
             android:layout_weight=".5"
-            android:src="@drawable/_three"
-            android:onClick="digitClicked"/>
+            android:src="@drawable/_three"/>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/multiply"
@@ -218,7 +215,7 @@
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="4dp"
             android:layout_weight=".5"
-            android:src="@drawable/_multiply_icon" />
+            android:src="@drawable/_multiply_icon"/>
 
     </LinearLayout>
 
@@ -240,8 +237,7 @@
             android:layout_marginEnd="4dp"
             android:layout_marginBottom="4dp"
             android:layout_weight=".5"
-            android:src="@drawable/_four"
-            android:onClick="digitClicked"/>
+            android:src="@drawable/_four"/>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/key5"
@@ -250,8 +246,7 @@
             android:layout_height="match_parent"
             android:layout_margin="4dp"
             android:layout_weight=".5"
-            android:src="@drawable/_five"
-            android:onClick="digitClicked"/>
+            android:src="@drawable/_five"/>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/key6"
@@ -260,8 +255,7 @@
             android:layout_height="match_parent"
             android:layout_margin="4dp"
             android:layout_weight=".5"
-            android:src="@drawable/_six"
-            android:onClick="digitClicked"/>
+            android:src="@drawable/_six"/>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/minus"
@@ -295,8 +289,7 @@
             android:layout_marginEnd="4dp"
             android:layout_marginBottom="4dp"
             android:layout_weight=".5"
-            android:src="@drawable/_seven"
-            android:onClick="digitClicked"/>
+            android:src="@drawable/_seven"/>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/key8"
@@ -305,8 +298,7 @@
             android:layout_height="match_parent"
             android:layout_margin="4dp"
             android:layout_weight=".5"
-            android:src="@drawable/_eight"
-            android:onClick="digitClicked"/>
+            android:src="@drawable/_eight"/>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/key9"
@@ -315,8 +307,7 @@
             android:layout_height="match_parent"
             android:layout_margin="4dp"
             android:layout_weight=".5"
-            android:src="@drawable/_nine"
-            android:onClick="digitClicked"/>
+            android:src="@drawable/_nine"/>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/plus"
@@ -351,8 +342,7 @@
             android:layout_marginEnd="4dp"
             android:layout_marginBottom="4dp"
             android:layout_weight=".5"
-            android:src="@drawable/_zero"
-            android:onClick="digitClicked"/>
+            android:src="@drawable/_zero" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/key_decimal"

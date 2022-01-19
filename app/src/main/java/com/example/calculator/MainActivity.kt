@@ -22,29 +22,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        val display: EditText = findViewById(R.id.display)
-        val acButton: FloatingActionButton = findViewById(R.id.ac)
-        acButton.setOnClickListener {
-            expression = ""
-            display.setText("0").toString()
-        }
-
-        val backspaceButton: FloatingActionButton = findViewById(R.id.backspace)
-        backspaceButton.setOnClickListener {
-            if(expression.isNotEmpty()){
-                Log.d(Tag, "in is not empty")
-                expression = expression.dropLast(1)
-                display.setText(expression)
-
-            }
-        }
-
     }
-
-
-
-
 
     fun digitClicked(view: android.view.View) {
         val clickedButton = view as FloatingActionButton
@@ -60,6 +38,9 @@ class MainActivity : AppCompatActivity() {
         val eightButton: FloatingActionButton = findViewById(R.id.key8)
         val nineButton: FloatingActionButton = findViewById(R.id.key9)
         val dotButton: FloatingActionButton = findViewById(R.id.key_decimal)
+        val backspaceButton: FloatingActionButton = findViewById(R.id.backspace)
+        val acButton: FloatingActionButton = findViewById(R.id.ac)
+
 
 
         when(clickedButton.id){
@@ -94,6 +75,16 @@ class MainActivity : AppCompatActivity() {
             nineButton.id -> {
                 expression += "9"
             }
+
+            backspaceButton.id -> {
+                expression = expression.dropLast(1)
+            }
+
+            acButton.id -> {
+                expression = "0"
+            }
+
+
         }
         display.setText(expression).toString()
     }

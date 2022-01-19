@@ -26,6 +26,7 @@
         <item name="android:elevation">0dp</item>
         <item name="fabCustomSize">@dimen/buttons</item>
         <item name="tint">@color/white</item>
+        <item name="android:onClick">digitClicked</item>
     </style>
 
 
@@ -36,6 +37,7 @@
         <item name="android:elevation">0dp</item>
         <item name="fabCustomSize">@dimen/buttons</item>
         <item name="tint">@color/pie_color</item>
+        <item name="android:onClick">digitClicked</item>
     </style>
 
 
@@ -47,6 +49,7 @@
         <item name="fabCustomSize">@dimen/buttons</item>
         <item name="android:gravity">center</item>
         <item name="tint">@color/pie_color</item>
+        <item name="android:onClick">digitClicked</item>
 
     </style>
 
