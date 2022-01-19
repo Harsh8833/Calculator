@@ -25,6 +25,7 @@
         <item name="backgroundTint">@color/gray_purple</item>
         <item name="android:elevation">0dp</item>
         <item name="fabCustomSize">@dimen/buttons</item>
+        <item name="tint">@color/white</item>
     </style>
 
 
@@ -34,6 +35,7 @@
         <item name="backgroundTint">@color/light_pink</item>
         <item name="android:elevation">0dp</item>
         <item name="fabCustomSize">@dimen/buttons</item>
+        <item name="tint">@color/pie_color</item>
     </style>
 
 
@@ -44,6 +46,7 @@
         <item name="android:elevation">0dp</item>
         <item name="fabCustomSize">@dimen/buttons</item>
         <item name="android:gravity">center</item>
+        <item name="tint">@color/pie_color</item>
 
     </style>
 

@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
     android:background="@color/light_red"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
 
     <!-- Text Field -->
@@ -22,6 +22,26 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom">
+
+            <EditText
+                android:id="@+id/display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:background="@android:color/transparent"
+                android:textSize="100dp"
+                android:text="0"
+                android:textAppearance="?attr/textAppearanceBodyLarge"
+                android:gravity="right|bottom"
+                android:textColor="@color/pie_color">
+
+            </EditText>
+        </LinearLayout>
+
 
     </com.google.android.material.card.MaterialCardView>
 
@@ -29,9 +49,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
         android:layout_weight=".25"
-        android:layout_marginTop="10dp">
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
@@ -39,10 +59,10 @@
             android:layout_weight=".2"
             android:gravity="center"
             android:text="( )"
-            android:textSize="24dp"
-            android:textColor="@color/pie_color"
             android:textAppearance="?attr/textAppearanceDisplayMedium"
-            />
+            android:textColor="@color/pie_color"
+            android:textSize="24dp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -50,10 +70,9 @@
             android:gravity="center"
 
             android:text="π"
-            android:textSize="24dp"
-            android:textColor="@color/pie_color"
             android:textAppearance="?attr/textAppearanceDisplayMedium"
-            />
+            android:textColor="@color/pie_color"
+            android:textSize="24dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -61,10 +80,9 @@
             android:layout_weight=".2"
             android:gravity="center"
             android:text="e"
-            android:textSize="24dp"
-            android:textColor="@color/pie_color"
             android:textAppearance="?attr/textAppearanceDisplayMedium"
-            />
+            android:textColor="@color/pie_color"
+            android:textSize="24dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -72,24 +90,22 @@
             android:layout_weight=".2"
             android:gravity="center"
             android:text="!"
-            android:textSize="24dp"
-            android:textColor="@color/pie_color"
             android:textAppearance="?attr/textAppearanceDisplayMedium"
-            />
+            android:textColor="@color/pie_color"
+            android:textSize="24dp" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/log_key"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="4dp"
             android:layout_weight=".1"
             android:scaleType="center"
-            app:fabCustomSize="40dp"
-
             android:src="@drawable/ic_up_down_icon"
+
             app:backgroundTint="@color/up_down"
-            app:elevation="0dp">
+            app:elevation="0dp"
+            app:fabCustomSize="40dp">
 
         </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
@@ -97,23 +113,24 @@
         <!-- First Row -->
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:orientation="horizontal"
         android:layout_weight=".5"
-        android:backgroundTint="@color/dark_pink">
+        android:backgroundTint="@color/dark_pink"
+        android:orientation="horizontal">
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/ac"
+            style="@style/ac_keys"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight=".5"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
             android:layout_marginEnd="4dp"
             android:layout_marginBottom="4dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginStart="16dp"
-            style="@style/ac_keys"
+            android:layout_weight=".5"
             android:src="@drawable/acac_icon">
 
         </com.google.android.material.floatingactionbutton.FloatingActionButton>
@@ -121,151 +138,138 @@
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/percent"
+            style="@style/symbols_keys"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight=".5"
             android:layout_margin="4dp"
-            style="@style/symbols_keys"
-            android:src="@drawable/_percent">
-        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+            android:layout_weight=".5"
+            android:src="@drawable/_percent"></com.google.android.material.floatingactionbutton.FloatingActionButton>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/divide"
+            style="@style/symbols_keys"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight=".5"
             android:layout_margin="4dp"
-            style="@style/symbols_keys"
-            android:src="@drawable/_divide_icon"
-            >
-        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+            android:layout_weight=".5"
+            android:src="@drawable/_divide_icon"></com.google.android.material.floatingactionbutton.FloatingActionButton>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/backspace"
+            style="@style/symbols_keys"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight=".5"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="4dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginStart="4dp"
-            style="@style/symbols_keys"
-            android:src="@drawable/vectorbackspace_icon">
-        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+            android:layout_weight=".5"
+            android:src="@drawable/vectorbackspace_icon"></com.google.android.material.floatingactionbutton.FloatingActionButton>
 
     </LinearLayout>
 
     <!-- Second Row -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:orientation="horizontal"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".5"
+        android:backgroundTint="@color/dark_pink"
+        android:orientation="horizontal">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/key1"
+            style="@style/number_keys"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
             android:layout_weight=".5"
-            android:backgroundTint="@color/dark_pink">
-
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/key1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight=".5"
-                android:layout_marginEnd="4dp"
-                android:layout_marginBottom="4dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginStart="16dp"
-                style="@style/number_keys"
-                android:src="@drawable/_one">
-            </com.google.android.material.floatingactionbutton.FloatingActionButton>
+            android:src="@drawable/_one"></com.google.android.material.floatingactionbutton.FloatingActionButton>
 
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/key2"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight=".5"
-                android:layout_margin="4dp"
-                style="@style/number_keys"
-                android:src="@drawable/_two">
-            </com.google.android.material.floatingactionbutton.FloatingActionButton>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/key2"
+            style="@style/number_keys"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:layout_weight=".5"
+            android:src="@drawable/_two"></com.google.android.material.floatingactionbutton.FloatingActionButton>
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/key3"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight=".5"
-                android:layout_margin="4dp"
-                style="@style/number_keys"
-                android:src="@drawable/_three">
-            </com.google.android.material.floatingactionbutton.FloatingActionButton>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/key3"
+            style="@style/number_keys"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:layout_weight=".5"
+            android:src="@drawable/_three"></com.google.android.material.floatingactionbutton.FloatingActionButton>
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/multiply"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight=".5"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="4dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginStart="4dp"
-                style="@style/symbols_keys"
-                android:src="@drawable/_multiply_icon"
-                >
-            </com.google.android.material.floatingactionbutton.FloatingActionButton>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/multiply"
+            style="@style/symbols_keys"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="4dp"
+            android:layout_weight=".5"
+            android:src="@drawable/_multiply_icon"></com.google.android.material.floatingactionbutton.FloatingActionButton>
 
-        </LinearLayout>
+    </LinearLayout>
 
     <!-- Third Row -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:orientation="horizontal"
         android:layout_weight=".5"
-        android:backgroundTint="@color/dark_pink">
+        android:backgroundTint="@color/dark_pink"
+        android:orientation="horizontal">
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/key4"
+            style="@style/number_keys"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight=".5"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
             android:layout_marginEnd="4dp"
             android:layout_marginBottom="4dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginStart="16dp"
-            style="@style/number_keys"
-            android:src="@drawable/_four">
-        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+            android:layout_weight=".5"
+            android:src="@drawable/_four"></com.google.android.material.floatingactionbutton.FloatingActionButton>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/key5"
+            style="@style/number_keys"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight=".5"
             android:layout_margin="4dp"
-            style="@style/number_keys"
-            android:src="@drawable/_five">
-        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+            android:layout_weight=".5"
+            android:src="@drawable/_five"></com.google.android.material.floatingactionbutton.FloatingActionButton>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/key6"
+            style="@style/number_keys"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight=".5"
             android:layout_margin="4dp"
-            style="@style/number_keys"
-            android:src="@drawable/_six">
-        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+            android:layout_weight=".5"
+            android:src="@drawable/_six"></com.google.android.material.floatingactionbutton.FloatingActionButton>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/minus"
+            style="@style/symbols_keys"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight=".5"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="4dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginStart="4dp"
-            style="@style/symbols_keys"
-            android:src="@drawable/_minus_icon">
-        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+            android:layout_weight=".5"
+            android:src="@drawable/_minus_icon"></com.google.android.material.floatingactionbutton.FloatingActionButton>
 
     </LinearLayout>
 
@@ -273,56 +277,51 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:orientation="horizontal"
         android:layout_weight=".5"
-        android:backgroundTint="@color/dark_pink">
+        android:backgroundTint="@color/dark_pink"
+        android:orientation="horizontal">
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/key7"
+            style="@style/number_keys"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight=".5"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
             android:layout_marginEnd="4dp"
             android:layout_marginBottom="4dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginStart="16dp"
-            style="@style/number_keys"
-            android:src="@drawable/_seven">
-        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+            android:layout_weight=".5"
+            android:src="@drawable/_seven"></com.google.android.material.floatingactionbutton.FloatingActionButton>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/key8"
+            style="@style/number_keys"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight=".5"
             android:layout_margin="4dp"
-            style="@style/number_keys"
-            android:src="@drawable/_eight">
-        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+            android:layout_weight=".5"
+            android:src="@drawable/_eight"></com.google.android.material.floatingactionbutton.FloatingActionButton>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/key9"
+            style="@style/number_keys"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight=".5"
             android:layout_margin="4dp"
-            style="@style/number_keys"
-            android:src="@drawable/_nine">
-        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+            android:layout_weight=".5"
+            android:src="@drawable/_nine"></com.google.android.material.floatingactionbutton.FloatingActionButton>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/plus"
+            style="@style/symbols_keys"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight=".5"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="4dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginStart="4dp"
-            style="@style/symbols_keys"
-            android:src="@drawable/_addition_icon"
-            >
-        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+            android:layout_weight=".5"
+            android:src="@drawable/_addition_icon"></com.google.android.material.floatingactionbutton.FloatingActionButton>
 
     </LinearLayout>
 
@@ -331,22 +330,21 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:orientation="horizontal"
         android:layout_weight=".5"
-        android:backgroundTint="@color/dark_pink">
+        android:backgroundTint="@color/dark_pink"
+        android:orientation="horizontal">
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/key0"
+            style="@style/number_keys"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight=".5"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
             android:layout_marginEnd="4dp"
             android:layout_marginBottom="4dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginStart="16dp"
-            style="@style/number_keys"
-            android:src="@drawable/_zero">
-        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+            android:layout_weight=".5"
+            android:src="@drawable/_zero"></com.google.android.material.floatingactionbutton.FloatingActionButton>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/key_decimal"
@@ -355,37 +353,32 @@
             android:layout_height="match_parent"
             android:layout_margin="4dp"
             android:layout_weight=".5"
-            android:src="@drawable/_dot">
-            </com.google.android.material.floatingactionbutton.FloatingActionButton>
+            android:src="@drawable/_dot"></com.google.android.material.floatingactionbutton.FloatingActionButton>
 
 
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
             android:id="@+id/equal"
             android:layout_width="0dp"
             android:layout_height="86dp"
+            android:layout_gravity="center"
             android:layout_marginStart="4dp"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="4dp"
             android:layout_weight="1"
-            app:backgroundTint="@color/equal_button"
-            app:elevation="0dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:gravity="center"
             android:shadowColor="@color/light_red"
             android:text="="
-            android:gravity="center"
-            android:layout_gravity="center"
+            android:textColor="@color/white"
             android:textSize="42dp"
-            android:fontFamily="sans-serif-condensed-light">
+            app:backgroundTint="@color/equal_button"
+            app:elevation="0dp">
 
 
         </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
 
     </LinearLayout>
-
-
-
-
-
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>
