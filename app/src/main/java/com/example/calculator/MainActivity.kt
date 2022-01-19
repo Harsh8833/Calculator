@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.InputType
 import android.util.Log
+import android.util.TypedValue
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -40,7 +41,15 @@ class MainActivity : AppCompatActivity() {
         val dotButton: FloatingActionButton = findViewById(R.id.key_decimal)
         val backspaceButton: FloatingActionButton = findViewById(R.id.backspace)
         val acButton: FloatingActionButton = findViewById(R.id.ac)
+        val percentButton: FloatingActionButton = findViewById(R.id.percent)
+        val divideButton: FloatingActionButton = findViewById(R.id.divide)
+        val multiplyButton: FloatingActionButton = findViewById(R.id.multiply)
 
+
+        if(expression.length > 12)
+        {
+            display.setTextSize(TypedValue.COMPLEX_UNIT_SP, 60F)
+        }
 
 
         when(clickedButton.id){
@@ -81,7 +90,28 @@ class MainActivity : AppCompatActivity() {
             }
 
             acButton.id -> {
-                expression = "0"
+                expression = ""
+                display.setText("0")
+            }
+
+            dotButton.id -> {
+                if(!expression.endsWith('.')){
+                    expression += "."
+                }
+            }
+            percentButton.id -> {
+                expression += "%"
+            }
+            divideButton.id -> {
+                if(!expression.endsWith('÷')){
+                    expression += "÷"
+                }
+
+            }
+            multiplyButton.id -> {
+                if(!expression.endsWith('×')){
+                    expression += "×"
+                }
             }
 
 
