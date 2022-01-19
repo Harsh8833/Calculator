@@ -147,7 +147,8 @@
             android:layout_marginTop="4dp"
             android:layout_marginStart="4dp"
             style="@style/symbols_keys"
-            android:text="⌫">
+            android:text="⌫"
+            android:textSize="40dp">
         </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
 
     </LinearLayout>
@@ -207,8 +208,9 @@
                 android:layout_marginBottom="4dp"
                 android:layout_marginTop="4dp"
                 android:layout_marginStart="4dp"
-                app:backgroundTint="@color/dark_pink"
-                app:elevation="0dp">
+                style="@style/symbols_keys"
+                android:text=" X"
+                >
             </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
 
         </LinearLayout>
@@ -263,8 +265,8 @@
             android:layout_marginBottom="4dp"
             android:layout_marginTop="4dp"
             android:layout_marginStart="4dp"
-            app:backgroundTint="@color/dark_pink"
-            app:elevation="0dp">
+            android:text=" -"
+            style="@style/symbols_keys">
         </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
 
     </LinearLayout>
@@ -319,8 +321,8 @@
             android:layout_marginBottom="4dp"
             android:layout_marginTop="4dp"
             android:layout_marginStart="4dp"
-            app:backgroundTint="@color/dark_pink"
-            app:elevation="0dp">
+            style="@style/symbols_keys"
+            android:text=" +">
         </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
 
     </LinearLayout>
