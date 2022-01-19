@@ -10,10 +10,20 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.textfield.TextInputEditText
 
 class MainActivity : AppCompatActivity() {
+
+
+    //display.inputType = InputType.TYPE_NULL
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+
+    }
+    fun digitClicked(view: android.view.View) {
+        val clickedButton = view as FloatingActionButton
         val display: EditText = findViewById(R.id.display)
         val acbutton: FloatingActionButton = findViewById(R.id.ac)
         val zeroButton: FloatingActionButton = findViewById(R.id.key0)
@@ -27,20 +37,16 @@ class MainActivity : AppCompatActivity() {
         val eightButton: FloatingActionButton = findViewById(R.id.key8)
         val nineButton: FloatingActionButton = findViewById(R.id.key9)
         val dotButton: FloatingActionButton = findViewById(R.id.key_decimal)
-        //display.inputType = InputType.TYPE_NULL
-
-        acbutton.setOnClickListener {
-            display.setText("").toString()
+        when(clickedButton.id){
+            oneButton.id -> display.setText("1").toString()
+            twoButton.id -> display.setText("2").toString()
+            threeButton.id -> display.setText("3").toString()
+            fourButton.id -> display.setText("4").toString()
+            fiveButton.id -> display.setText("5").toString()
+            sixButton.id -> display.setText("6").toString()
+            sevenButton.id -> display.setText("7").toString()
+            eightButton.id -> display.setText("8").toString()
+            nineButton.id -> display.setText("9").toString()
         }
-        oneButton.setOnClickListener {
-            display.setText("1").toString()
-        }
-        twoButton.setOnClickListener {
-            display.setText("2").toString()
-        }
-
-
-
-
     }
 }
