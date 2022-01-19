@@ -23,6 +23,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val display: EditText = findViewById(R.id.display)
+        val acButton: FloatingActionButton = findViewById(R.id.ac)
+        acButton.setOnClickListener {
+            expression = ""
+            display.setText("0").toString()
+        }
     }
 
     fun digitClicked(view: android.view.View) {
@@ -40,10 +46,10 @@ class MainActivity : AppCompatActivity() {
         val nineButton: FloatingActionButton = findViewById(R.id.key9)
         val dotButton: FloatingActionButton = findViewById(R.id.key_decimal)
         val backspaceButton: FloatingActionButton = findViewById(R.id.backspace)
-        val acButton: FloatingActionButton = findViewById(R.id.ac)
         val percentButton: FloatingActionButton = findViewById(R.id.percent)
         val divideButton: FloatingActionButton = findViewById(R.id.divide)
         val multiplyButton: FloatingActionButton = findViewById(R.id.multiply)
+
 
 
         if(expression.length > 12)
@@ -87,11 +93,6 @@ class MainActivity : AppCompatActivity() {
 
             backspaceButton.id -> {
                 expression = expression.dropLast(1)
-            }
-
-            acButton.id -> {
-                expression = ""
-                display.setText("0")
             }
 
             dotButton.id -> {

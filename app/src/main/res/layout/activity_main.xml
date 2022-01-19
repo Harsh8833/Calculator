@@ -130,7 +130,7 @@
             android:layout_marginEnd="4dp"
             android:layout_marginBottom="4dp"
             android:layout_weight=".5"
-            android:src="@drawable/acac_icon"/>
+            android:src="@drawable/acac_icon" />
 
 
 
@@ -371,6 +371,7 @@
             android:textColor="@color/white"
             android:textSize="42dp"
             app:backgroundTint="@color/equal_button"
+            android:elevation="0dp"
             app:elevation="0dp">
 
 
