@@ -49,6 +49,9 @@ class MainActivity : AppCompatActivity() {
         val percentButton: FloatingActionButton = findViewById(R.id.percent)
         val divideButton: FloatingActionButton = findViewById(R.id.divide)
         val multiplyButton: FloatingActionButton = findViewById(R.id.multiply)
+        val minusButton: FloatingActionButton = findViewById(R.id.minus)
+        val plusButton: FloatingActionButton =findViewById(R.id.plus)
+
 
 
 
@@ -114,6 +117,19 @@ class MainActivity : AppCompatActivity() {
                     expression += "×"
                 }
             }
+            minusButton.id -> {
+                if(!expression.endsWith('-')){
+                    expression += "−"
+                }
+            }
+
+            plusButton.id -> {
+                if(!expression.endsWith('+')){
+                    expression += "+"
+                }
+            }
+
+
 
 
         }
