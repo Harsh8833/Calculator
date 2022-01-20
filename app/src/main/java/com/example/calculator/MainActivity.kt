@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import java.text.DecimalFormat
 
 
 var newState = true
@@ -140,30 +141,31 @@ class MainActivity : AppCompatActivity() {
         val display: EditText = findViewById(R.id.display)
         var num: String = ""
         var symbol: Char = '+'
-        var result: Int = 0
+        var result: Double = 0.0
 
         for (each in expression) {
-            if (each in '0'..'9')
+            if (each in listOf('.','1','2','3','4','5', '6', '7', '8', '9', '0'))
                 num += each
             else {
                 when (symbol) {
-                    '+' -> result += Integer.parseInt(num)
-                    '-' -> result -= Integer.parseInt(num)
-                    '×' -> result *= Integer.parseInt(num)
-                    '÷' -> result /= Integer.parseInt(num)
+                    '+' -> result += num.toDouble()
+                    '−' -> result -= num.toDouble()
+                    '×' -> result *= num.toDouble()
+                    '÷' -> result /= num.toDouble()
                 }
                 num = ""
                 symbol = each
             }
         }
         when (symbol) {
-            '+' -> result += Integer.parseInt(num)
-            '-' -> result -= Integer.parseInt(num)
-            '×' -> result *= Integer.parseInt(num)
-            '÷' -> result /= Integer.parseInt(num)
+            '+' -> result += num.toDouble()
+            '−' -> result -= num.toDouble()
+            '×' -> result *= num.toDouble()
+            '÷' -> result /= num.toDouble()
         }
-        var output = result.toString()
-
+        val format: DecimalFormat = DecimalFormat("0.#")
+        val output = format.format(result).toString()
+        expression = output
         //display.setText("56").toString()
         Log.e(Tag, "$output")
         display.setText(output).toString()
